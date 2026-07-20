@@ -12,8 +12,8 @@ const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://portfolio.ricoui.com
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://wzh20201314-sketch.github.io',
-  base: '/undergroundash/',
+  site: siteUrl
+  base: '/',
   envPrefix: 'PUBLIC_',
   vite: {
     plugins: [tailwindcss()],
@@ -29,4 +29,11 @@ export default defineConfig({
   },
 
   integrations: [mdx(), sitemap()],
+});
+
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  site:  'https://wzh20201314-sketch.github.io',
+  base: '/undergroundash/', // 如果你的仓库名叫 undergroundash，这里就写 '/undergroundash/'
 });
