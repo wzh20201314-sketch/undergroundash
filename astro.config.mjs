@@ -10,7 +10,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // https://astro.build/config
 export default defineConfig({
   site: 'https://wzh20201314-sketch.github.io',
-  base: '/',
 
   envPrefix: 'PUBLIC_',
   vite: {
